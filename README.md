@@ -8,14 +8,38 @@ $ npm start
 ````
 
 Head over to https://vitejs.dev/ to learn more about using vite
-## About Scrimba
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+////////////////////////* Extended classes: *\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-Happy Coding!
+
+class Player {
+    constructor(name, country) {
+        this.name = name;
+        this.country = country;
+    }
+    
+    introduce() {
+        console.log(`${this.name} was born in ${this.country}`);
+    }
+}
+
+const messi = new Player("Messi", "Argentina");
+
+messi.introduce();
+
+class TennisPlayer extends Player {
+    constructor(name, country, age) {
+        super(name, country);
+        this.age = age;
+    }
+    
+    playTennis() {
+        console.log(`${this.name} is ${this.age} years old and knows how to play Tennis`);
+    }
+}
+
+const roger = new TennisPlayer( "Roger Federer", "Spain", 38);
+
+roger.introduce();
+roger.playTennis();
